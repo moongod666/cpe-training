@@ -3,7 +3,6 @@
 using namespace std;
 
 int main () {
-    freopen("input.txt", "r", stdin);
     int count;
     cin >> count;
    for (int x = 0; x < count; x++) {

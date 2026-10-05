@@ -12,13 +12,17 @@ int GCD(int a, int b) {
 }
 
 int main() {
+    //freopen("input.txt","r",stdin);
     int G = 0, N;
-    cin >> N;
-    for(int i = 1 ; i < N ; i++ ) {
-        for( int j = i + 1 ; j<=N ; j++ )
-        {
-            G+=GCD(i,j);
+    while(cin >> N) {
+        if (N == 0) break;
+        G=0;
+        for(int i = 1 ; i < N ; i++ ) {
+            for( int j = i + 1 ; j<=N ; j++ )
+            {
+                G+=GCD(i,j);
+            }
         }
+        cout << G << endl;
     }
-    cout << G << endl;
 }

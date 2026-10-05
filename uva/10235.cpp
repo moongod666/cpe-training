@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<cmath>
 #include <math.h>
@@ -13,6 +12,7 @@ bool is_prime(int a) {
 }
 
 int main() {
+    freopen("input.txt", "r", stdin);
     int a;
     while (cin >> a) {
         if (!is_prime(a)) cout << a << " is not prime" << endl;

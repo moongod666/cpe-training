@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 int main() {
-    freopen("input.txt", "r", stdin);
+    //freopen("input.txt", "r", stdin);
     int t;
     int count = 0;
     while (cin >> t) {
@@ -13,7 +13,7 @@ int main() {
         bool is_B2 = true;
         for (int i = 0 ; i < t ; i++) {
             cin >> b[i];
-            if ( i !=0 && b[i] <= b[i-1]) is_B2 = false;
+            if ( (i !=0 && b[i] <= b[i-1]) || b[i] <= 0) is_B2 = false;
         }
 
         string temp;
@@ -25,6 +25,6 @@ int main() {
                 sum[temp] ++;
             }
         }
-        cout << "Case #" << count << ": It is" << (is_B2 ? " " : " not ") <<"a B2-Sequence.\n";
+        cout << "Case #" << count << ": It is" << (is_B2 ? " " : " not ") <<"a B2-Sequence.\n\n";
     }
 }
